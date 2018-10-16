@@ -10619,6 +10619,43 @@ form button:hover {
   color: #2fa360;
 }
 
+.post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px dashed #333;
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 15px 30px;
+  max-height: 200px;
+}
+
+.post__media {
+  width: 200px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.post__media img {
+  width: 500px;
+}
+
+.post__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -10629,5 +10666,12 @@ form button:hover {
   margin: 20px 0;
   font-size: 20px;
   font-style: italic;
+}
+
+.comments article {
+  border: 1px dotted #333;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
 }
 

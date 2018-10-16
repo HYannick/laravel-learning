@@ -13,6 +13,7 @@
 @import "hero";
 @import "sidebar";
 @import "form";
+@import "posts";
 
 .navbar-laravel {
   background-color: #fff;
@@ -25,5 +26,14 @@
     margin: 20px 0;
     font-size: 20px;
     font-style: italic;
+  }
+}
+
+.comments {
+  article {
+    border: 1px dotted #333;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
   }
 }

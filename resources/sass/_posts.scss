@@ -1,0 +1,23 @@
+.post {
+  display: flex;
+  border: 1px dashed #333;
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 15px 30px;
+  max-height: 200px;
+  &__media {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 500px;
+    }
+  }
+  &__content {
+    flex: 1;
+    padding: 20px;
+  }
+}
