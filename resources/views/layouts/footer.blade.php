@@ -1,3 +1,3 @@
-<div class="footer">
-    this is the footer
-</div>
+<footer>
+    <div class="container">this is the footer</div>
+</footer>

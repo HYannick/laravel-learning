@@ -1,3 +1,38 @@
+* {
+  outline: white;
+}
 header {
-  background: crimson;
+  padding: 20px;
+  > div {
+    display: flex;
+    align-items: center;
+  }
+  .logo {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #333;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    li {
+      display: flex;
+      margin: 0 10px;
+      a {
+        font-size: 20px;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s;
+        &.active {
+          color: #9561e2;
+        }
+        &:hover, &:active {
+          color: #9561e2;
+        }
+      }
+    }
+  }
 }

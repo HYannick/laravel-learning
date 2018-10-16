@@ -9,8 +9,21 @@
 @import '~bootstrap/scss/bootstrap';
 
 @import "header";
+@import "footer";
+@import "hero";
+@import "sidebar";
+@import "form";
 
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+
+.content {
+  .description {
+    margin: 20px 0;
+    font-size: 20px;
+    font-style: italic;
+  }
 }

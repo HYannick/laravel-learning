@@ -1,0 +1,29 @@
+.hero-item {
+  background: center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  border-radius: 50px 10px 50px;
+  overflow: hidden;
+  &:before {
+    content: '';
+    background: transparentize(#9561e2, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+  }
+  h2 {
+    font-size: 45px;
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 1;
+  }
+}

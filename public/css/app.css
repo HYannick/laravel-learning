@@ -10466,13 +10466,168 @@ a.text-dark:focus {
   }
 }
 
+* {
+  outline: white;
+}
+
 header {
-  background: crimson;
+  padding: 20px;
+}
+
+header > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo {
+  font-size: 30px;
+  font-weight: bolder;
+  color: #333;
+}
+
+header ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+header ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 10px;
+}
+
+header ul li a {
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+header ul li a.active {
+  color: #9561e2;
+}
+
+header ul li a:hover,
+header ul li a:active {
+  color: #9561e2;
+}
+
+footer {
+  padding: 20px;
+  height: 200px;
+  background: #9561e2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-item {
+  background: center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  border-radius: 50px 10px 50px;
+  overflow: hidden;
+}
+
+.hero-item:before {
+  content: '';
+  background: rgba(149, 97, 226, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.hero-item h2 {
+  font-size: 45px;
+  padding: 20px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+aside {
+  border: 2px dashed #333;
+  height: 100%;
+  border-radius: 10px 20px 20px 10px;
+  padding: 20px;
+}
+
+form {
+  padding: 20px 0;
+}
+
+form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form .form-group input,
+form .form-group textarea {
+  background: white;
+  border: 1px dashed #333;
+  border-radius: 10px 5px;
+  padding: 20px;
+}
+
+form button {
+  border: 2px dashed #333;
+  background: #2fa360;
+  color: white;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  padding: 10px 20px;
+  border-radius: 20px 10px;
+}
+
+form button:hover {
+  background: white;
+  color: #2fa360;
 }
 
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.content .description {
+  margin: 20px 0;
+  font-size: 20px;
+  font-style: italic;
 }
 
