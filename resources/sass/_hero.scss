@@ -18,12 +18,25 @@
     right: 0;
     z-index: 0;
   }
-  h2 {
-    font-size: 45px;
+  &__content {
+    display: flex;
+    flex-direction: column;
     padding: 20px;
-    font-weight: bold;
-    color: white;
     position: relative;
     z-index: 1;
+    color: white;
+    h2 {
+      font-size: 45px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .date {
+      font-style: italic;
+      font-size: 12px;
+    }
+    .author {
+      font-size: 16px;
+    }
   }
+
 }

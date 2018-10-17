@@ -11,15 +11,17 @@ form {
     }
   }
   button {
-    border: 2px dashed #333;
+    cursor: pointer;
+    border: 1px solid #2fa360;
     background: #2fa360;
     color: white;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, border 0.3s;
     padding: 10px 20px;
     border-radius: 20px 10px;
     &:hover {
       background: white;
       color: #2fa360;
+      border: 1px solid #333;
     }
   }
 }

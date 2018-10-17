@@ -7,17 +7,31 @@ use App\Post;
 
 class PostsController extends Controller
 {
-    public function index()
+    public function __construct()
     {
-        $page_title = 'Posts List';
-        $posts = Post::orderBy('created_at', 'desc')->get();
-
-        return view('posts.index', compact('posts', 'page_title'));
+        $this->middleware('auth')->except(['index','show']);
     }
 
-    public function show(Post $post) {
-        $page_title = $post->title;
-        return view('posts.show', compact('post', 'page_title'));
+    public function index()
+    {
+        $data = [
+            'page_title' => 'Here is the list',
+            'created_at' => '',
+            'author' => ''
+        ];
+        $posts = Post::orderBy('created_at', 'desc')->get();
+
+        return view('posts.index', compact('posts', 'page_title', 'data'));
+    }
+
+    public function show(Post $post)
+    {
+        $data = [
+            'page_title' => $post->title,
+            'created_at' => $post->created_at->toFormattedDateString(),
+            'author' => $post->user->name
+        ];
+        return view('posts.show', compact('post', 'data'));
     }
 
     public function create()
@@ -27,16 +41,7 @@ class PostsController extends Controller
 
     public function store()
     {
-        $this->validate(request(), [
-            'title' => 'required',
-            'body' => 'required'
-        ]);
-        $post = new Post();
-        $post->title = request()->title;
-        $post->description = request()->description;
-        $post->body = request()->body;
-
-        $post->save();
+        auth()->user()->publish(new Post(request(['title', 'description', 'body'])));
 
         return redirect('/');
     }
