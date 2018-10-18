@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Post;
 
@@ -9,7 +10,7 @@ class PostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except(['index','show']);
+        $this->middleware('auth')->except(['index', 'show']);
     }
 
     public function index()
@@ -19,7 +20,10 @@ class PostsController extends Controller
             'created_at' => '',
             'author' => ''
         ];
-        $posts = Post::orderBy('created_at', 'desc')->get();
+
+
+        $posts = Post::latest()->filter(request(['month', 'year']))->get();
+
 
         return view('posts.index', compact('posts', 'page_title', 'data'));
     }
