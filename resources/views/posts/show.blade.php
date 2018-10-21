@@ -6,6 +6,11 @@
     <div class="content">
         <p class="description">{{$post->description}}</p>
         <p>{{$post->body}}</p>
+        @if (count($post->tags))
+            @foreach ($post->tags as $tag)
+                <a href="/posts/tags/{{$tag->name}}">{{$tag->name}}</a>
+            @endforeach
+        @endif
     </div>
     <div class="comments">
         <h4>Comments</h4>

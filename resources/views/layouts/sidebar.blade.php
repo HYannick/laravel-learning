@@ -15,4 +15,11 @@
             <li><a href="/?month={{$archive['month']}}&year={{$archive['year']}}">{{$archive['month'] .' '. $archive['year']}}</a> </li>
         @endforeach
     </ul>
+
+    <h3>Tags</h3>
+    <ul class="archives">
+        @foreach ($tags as $tag)
+            <li><a href="/posts/tags/{{$tag}}">{{$tag}}</a></li>
+        @endforeach
+    </ul>
 </aside>
