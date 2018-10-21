@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     protected $fillable = ['title', 'description', 'body'];
+
     public function comments() {
         return $this->hasMany(Comment::class);
     }
@@ -18,8 +19,9 @@ class Post extends Model
 //            'body' => $body,
 //            'post_id' => $this->id
 //        ]);
+        $user_id = auth()->user()->id;
 
-        $this->comments()->create(compact('body'));
+        $this->comments()->create(compact('body', 'user_id'));
     }
 
 
