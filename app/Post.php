@@ -48,6 +48,9 @@ class Post extends Model
         if($year = $filters['year']) {
             $query->whereYear('created_at', $year);
         }
+    }
 
+    public function tags() {
+        return $this->belongsToMany(Tag::class);
     }
 }

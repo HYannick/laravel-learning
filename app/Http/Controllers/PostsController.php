@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\Posts;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Post;
@@ -13,7 +14,7 @@ class PostsController extends Controller
         $this->middleware('auth')->except(['index', 'show']);
     }
 
-    public function index()
+    public function index(Posts $posts)
     {
         $data = [
             'page_title' => 'Here is the list',
@@ -22,8 +23,8 @@ class PostsController extends Controller
         ];
 
 
-        $posts = Post::latest()->filter(request(['month', 'year']))->get();
-
+//        $posts = Post::latest()->filter(request(['month', 'year']))->get();
+        $posts = $posts->all();
 
         return view('posts.index', compact('posts', 'page_title', 'data'));
     }

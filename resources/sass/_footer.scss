@@ -3,10 +3,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   > div {
-    background: #9561e2;
     padding: 20px;
-    height: 200px;
     border-radius: 10px 10px 0 0;
   }
 }

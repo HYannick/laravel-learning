@@ -1,0 +1,1 @@
+<h1 style="font-family: 'monospace', sans-serif;">Welcome to LaraTrainings! {{$user->name}}</h1>

@@ -10567,12 +10567,11 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 footer > div {
-  background: #9561e2;
   padding: 20px;
-  height: 200px;
   border-radius: 10px 10px 0 0;
 }
 
@@ -10649,6 +10648,8 @@ aside .about {
   padding: 20px;
   background: #5cd08d;
   border-radius: 10px 20px 20px 10px;
+  -webkit-box-shadow: 10px 10px 30px 0 #ddd;
+          box-shadow: 10px 10px 30px 0 #ddd;
   margin-bottom: 30px;
 }
 
@@ -10722,11 +10723,12 @@ form button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px dashed #333;
   margin: 30px 0 0;
   overflow: hidden;
   border-radius: 10px;
   max-height: 200px;
+  -webkit-box-shadow: 10px 10px 30px 0 #ddd;
+          box-shadow: 10px 10px 30px 0 #ddd;
 }
 
 .post__media {

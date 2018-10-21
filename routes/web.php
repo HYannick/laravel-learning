@@ -11,7 +11,7 @@
 |
 */
 
-
+//dd(resolve('App\Billing\Stripe'));
 
 //Route::get('/', function() {
 //    $name = 'Ayho';
